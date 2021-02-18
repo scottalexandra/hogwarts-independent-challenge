@@ -1,0 +1,12 @@
+<section class="professor">
+  <p>Professor Name: <%= @professor.name %></p>
+  <p>Professor Age: <%= @professor.age %></p>
+  <p>Professor Specialty: <%= @professor.specialty %></p>
+</section>
+
+<section class="student">
+  <% @professor.students.each do |student| %>
+      <p class="name"><%= student.name %></p>
+      <%= button_to "unenroll", "/professors/#{@professor.id}/students/#{student.id}", method: :delete %>
+  <% end %>
+</section>

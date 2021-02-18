@@ -1,0 +1,12 @@
+<%= form_tag "/professors/#{@professor.id}", method: :patch do %>
+  <%= label_tag :name %>
+  <%= text_field_tag :name %>
+
+  <%= label_tag :age %>
+  <%= text_field_tag :age %>
+
+  <%= label_tag :specialty %>
+  <%= text_field_tag :specialty %>
+
+  <%= submit_tag 'Update Professor' %>
+<% end %>

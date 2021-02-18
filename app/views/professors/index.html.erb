@@ -1,0 +1,10 @@
+<section class="professors">
+  <% @professors.each do |professor| %>
+    <div class= "professor-<%= professor.id %>">
+      <p>Professor Name: <%= professor.name %></p>
+      <p>Professor Age: <%= professor.age %></p>
+      <p>Professor Specialty: <%= professor.specialty %></p>
+      <%= button_to 'Update', "/professors/#{professor.id}/edit", method: :get %>
+    </div>
+  <% end %>
+</section>
